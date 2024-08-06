@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio Wevbsite HTML CSS only</title>
+  <title>Personal Portfolio Website</title>
   <link rel="stylesheet" href="index.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
-  rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
   <header class="header">
     <a href="#" class="logo">Noureddine</a>
     <nav class="navbar">
       <a href="#" class="active">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -27,22 +24,78 @@
     <div class="home-content">
       <h1>Hi, I'm Noureddine Bouderbala</h1>
       <h3>Full-Stack Developer</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-        Explicabo, iusto possimus at non modi dolores id quae repellendus 
-        nobis quaerat adipisci ex atque reprehenderit omnis officia 
-        placeat.</p>
-        <div class="btn-box">
-          <a href="#">Hire Me</a>
-          <a href="#">Let's Talk</a>
-        </div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, iusto possimus at non modi dolores id quae repellendus nobis quaerat adipisci ex atque reprehenderit omnis officia placeat.</p>
+      <div class="btn-box">
+        <a href="#">Hire Me</a>
+        <a href="#">Let's Talk</a>
+      </div>
     </div>
     <div class="home-sci">
       <a href="#"><i class='bx bxl-facebook'></i></a>
-      <a href="#"><i class='bx bxl-instagram' ></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
       <a href="#"><i class='bx bxl-linkedin'></i></a>
     </div>
     <span class="home-imgHover"></span>
   </section>
+
+  <!-- Additional Sections -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quaerat atque mollitia non est officiis pariatur natus eaque nam nulla assumenda hic iusto repellendus, praesentium, qui laborum esse maiores ad!</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-content">
+      <h2>Services</h2>
+      <div class="service-box">
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, delectus consectetur qui ab et magni eveniet totam doloribus aspernatur architecto asperiores adipisci, dolores perspiciatis maxime vero? Eveniet laboriosam praesentium fuga.</p>
+      </div>
+      <div class="service-box">
+        <h3>Machine Learning</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus soluta eligendi officiis. Beatae nemo corrupti totam vitae quae consequatur quidem quisquam! Sit odio ducimus consectetur recusandae minima, dolor saepe molestiae.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-content">
+      <h2>Portfolio</h2>
+      <div class="portfolio-item">
+        <h3>Project 1</h3>
+        <p>Brief description of the project.</p>
+        <a href="https://github.com/your-github/project1">View Project</a>
+      </div>
+      <div class="portfolio-item">
+        <h3>project 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsa!</p>
+        <a href="https://github.com/your-github/weather-app">View Project</a>
+      </div>
+      <div class="portfolio-item">
+        <h3>Project 3</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium minima fugiat officia?</p>
+        <a href="https://github.com/your-github/todo-list">View Project</a>
+      </div>
+    </div>
+  </section>
   
+
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h2>Contact</h2>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
 </body>
 </html>

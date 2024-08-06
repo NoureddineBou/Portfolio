@@ -14,15 +14,16 @@ body {
 
 .header {
   position: fixed;
+  background: #081b29;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  box-shadow: 0px 5px 20px 0px black;
 }
 
 .logo {
@@ -33,17 +34,6 @@ body {
   font-weight: 600;
 }
 
-.logo::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: .4s;
-}
 
 .navbar a {
   font-size: 18px;
@@ -56,7 +46,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active{
- color: #00abf0;  
+  color: #00abf0;  
 }
 
 .home {
@@ -67,12 +57,10 @@ body {
   display: flex;
   align-items: center;
   padding: 0 10%;
-
 }
 
 .home-content {
   max-width: 600px;
-
 }
 
 .home-content h1 {
@@ -82,18 +70,6 @@ body {
   line-height: 1.2;
 }
 
-.home-content h1::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 1s;
-}
-
 .home-content h3 {
   position: relative;
   font-size: 32px;
@@ -101,17 +77,6 @@ body {
   color: #00abf0;
 }
 
-.home-content h3::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.3s;
-}
 
 .home-content p {
   position: relative;
@@ -119,38 +84,12 @@ body {
   margin: 20px 0 40px;
 }
 
-.home-content p::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.6s;
-}
-
-
 .home-content .btn-box {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 345px;
   height: 50px;
-}
-
-.home-content .btn-box::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 1.9s;
-  z-index: 2;
 }
 
 
@@ -187,12 +126,10 @@ body {
   color: #081b29;
 }
 
-
 .btn-box a:nth-child(2)::before {
   background: #00abf0;
 }
 
- 
 .btn-box a::before {
   content: '';
   position: absolute;
@@ -204,7 +141,7 @@ body {
   z-index: -1;
   transition: .5s;
 }
-  
+
 .btn-box a:hover::before {
   width: 100%;
 }
@@ -215,19 +152,6 @@ body {
   width: 170px;
   display: flex;
   justify-content: space-between;
-}
-
-.home-sci::before {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 2.5s;
-  z-index: 2;
 }
 
 .home-sci a {
@@ -268,46 +192,135 @@ body {
 
 }
 
+
 .home-imgHover {
   position: absolute;
-  top: 0;
-  right: 0px;
-  width: 50%;
-  height: 100%;
-  background: transparent;
-  transition: 3s;
-  animation: manipActiveHover .1s forwards;
-  animation-delay: 4s;
-  pointer-events: none;
+  right: 10%;
+  bottom: 70px;
+  width: 35px;
+  height: 35px;
+  border-left: 8px solid #00abf0;
+  border-bottom: 8px solid #00abf0;
+  animation: imgHover 1.5s linear infinite;
 }
 
-.home-imgHover:hover {
-  background: #081b29;
-  opacity: .8;
-  z-index: 1;
-}
-
-.home-imgHover::after {
-  content: '';
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 120%;
-  height: 100%;
-  background: #081b29 ;
-  animation: showRight 1s ease forwards;
-  animation-delay: 3s;
-  z-index: 100;
-}
-
-@keyframes showRight {
-  100%{
-    width: 0;
+@keyframes imgHover {
+  0% {
+    transform: translateY(0);
   }
-}
-
-@keyframes manipActiveHover {
   100% {
-    pointer-events: auto;
+    transform: translateY(-25px);
   }
+}
+
+.about {
+  padding: 60px 10%;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.services {
+  padding: 60px 10%;
+  background: #ededed;
+  color: #333;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.service-box {
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 24px;
+}
+
+.service-box p {
+  font-size: 18px;
+}
+
+.portfolio {
+  padding: 60px 10%;
+  background: #081b29;
+  color: #ededed;
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  margin-bottom: 20px;
+}
+
+.portfolio-item h3 {
+  font-size: 24px;
+}
+
+.portfolio-item p {
+  font-size: 18px;
+}
+
+.portfolio-item a {
+  color: #00abf0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact {
+  padding: 60px 10%;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #00abf0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #008ecc;
 }
