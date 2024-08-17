@@ -1,2 +1,2 @@
 # Portfolio
-working on it
+a simple example for a portfolio using HMTL, CSS and JS
